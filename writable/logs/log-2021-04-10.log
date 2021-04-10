@@ -1,0 +1,25 @@
+ERROR - 2021-04-10 18:47:03 --> Error connecting to the database: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente.
+
+CRITICAL - 2021-04-10 18:47:03 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Database\BaseConnection.php(618): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1966): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', Array, false)
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Model.php(570): CodeIgniter\Database\BaseBuilder->countAllResults(false)
+#3 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\BaseModel.php(1140): CodeIgniter\Model->countAllResults(false)
+#4 C:\xampp\htdocs\crud-rapido\app\Controllers\User.php(20): CodeIgniter\BaseModel->paginate(10)
+#5 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-rapido\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-04-10 18:47:03 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\crud-rapido\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\crud-rapido\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Debug\Exceptions.php(281): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}

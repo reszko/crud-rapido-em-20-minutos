@@ -1,0 +1,58 @@
+CRITICAL - 2021-04-07 16:58:57 --> syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST)
+#0 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(265): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Autoloader\Autoloader.php(228): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\User...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\User...')
+#3 C:\xampp\htdocs\crud-rapido\app\Controllers\User.php(13): spl_autoload_call('App\\Models\\User...')
+#4 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(908): App\Controllers\User->__construct()
+#5 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(422): CodeIgniter\CodeIgniter->createController()
+#6 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-rapido\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+ERROR - 2021-04-07 16:59:14 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: NO)
+CRITICAL - 2021-04-07 16:59:14 --> Unable to connect to the database.
+#0 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Database\BaseConnection.php(618): CodeIgniter\Database\BaseConnection->initialize()
+#1 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1866): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Model.php(213): CodeIgniter\Database\BaseBuilder->get()
+#3 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\BaseModel.php(583): CodeIgniter\Model->doFindAll(0, 0)
+#4 C:\xampp\htdocs\crud-rapido\app\Controllers\User.php(19): CodeIgniter\BaseModel->findAll()
+#5 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\User->index()
+#6 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-rapido\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2021-04-07 16:59:14 --> Uncaught ErrorException: print_r(): Property access is not allowed yet in C:\xampp\htdocs\crud-rapido\app\Views\errors\html\error_exception.php:100
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'print_r(): Prop...', 'C:\\xampp\\htdocs...', 100, Array)
+#1 C:\xampp\htdocs\crud-rapido\app\Views\errors\html\error_exception.php(100): print_r(Object(App\Controllers\User), true)
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Debug\Exceptions.php(281): include('C:\\xampp\\htdocs...')
+#3 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Debug\Exceptions.php(147): CodeIgniter\Debug\Exceptions->render(Object(CodeIgniter\Database\Exceptions\DatabaseException), 500)
+#4 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(CodeIgniter\Database\Exceptions\DatabaseException))
+#5 {main}
+  thrown
+#0 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+#1 {main}
+CRITICAL - 2021-04-07 17:15:10 --> Call to undefined function form_open()
+#0 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\View\View.php(220): include()
+#1 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('form', Array, true)
+#3 C:\xampp\htdocs\crud-rapido\app\Controllers\User.php(38): view('form')
+#4 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\User->create()
+#5 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#6 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\crud-rapido\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2021-04-07 17:19:41 --> Undefined variable: user
+#0 C:\xampp\htdocs\crud-rapido\app\Views\form.php(18): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined varia...', 'C:\\xampp\\htdocs...', 18, Array)
+#1 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\View\View.php(220): include('C:\\xampp\\htdocs...')
+#2 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\View\View.php(222): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Common.php(1217): CodeIgniter\View\View->render('form', Array, true)
+#4 C:\xampp\htdocs\crud-rapido\app\Controllers\User.php(38): view('form')
+#5 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(936): App\Controllers\User->create()
+#6 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(432): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+#7 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\CodeIgniter.php(333): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\crud-rapido\public\index.php(44): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\crud-rapido\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(45): require_once('C:\\xampp\\htdocs...')
+#10 {main}
